@@ -1,17 +1,37 @@
 package com.bealder.sample;
 
-import android.support.v7.app.ActionBarActivity;
+import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.bealder.sdk.manager.BealderParameters;
+import com.bealder.sdk.manager.BealderSDK;
 
-public class MainActivity extends ActionBarActivity {
+
+public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main);// Require
+        BealderParameters.startApp(this);
+
+        // If you want ask BLE activation
+        BealderSDK.askBleActivation(this);
+
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        BealderParameters.onStart();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        BealderParameters.onStop();
     }
 
     @Override
