@@ -15,10 +15,10 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);// Require
-        BealderParameters.startApp(this);
 
         // If you want ask BLE activation
-        BealderSDK.askBleActivation(this);
+        BealderParameters.askBleActivation(this);
+        BealderParameters.askGPSActivation(this, "Geolocation activation", "please, can you activate localisation?");
 
     }
 

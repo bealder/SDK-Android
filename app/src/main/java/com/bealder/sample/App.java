@@ -1,6 +1,7 @@
 package com.bealder.sample;
 
 import android.app.Application;
+import android.graphics.Color;
 
 import com.bealder.sdk.manager.BealderParameters;
 import com.bealder.sdk.manager.BealderSDK;
@@ -15,19 +16,22 @@ import org.altbeacon.beacon.startup.RegionBootstrap;
 public class App extends Application implements BootstrapNotifier {
 
     private RegionBootstrap regionBootstrap;
+    private BealderSDK bealderSDK;
 
     @Override
     public void onCreate() {
         super.onCreate();
 
         // Initialise Bealder
-        BealderSDK bealderSDK = BealderSDK.getInstance(this);
+        bealderSDK = new BealderSDK(this);
 
         // Show debug in logcat
         //BealderParameters.setDebugMod();
 
         // Set Icon
-        BealderParameters.setLogo(R.drawable.logo);
+        BealderParameters.setNotifIconL(R.drawable.logo_trans);
+        BealderParameters.setNotifIcon(R.drawable.ic_launcher);
+        BealderParameters.setNotifColorL(Color.parseColor("#2E6B7D"));
 
         // If Token Push, send it, any time
         //BealderParameters.setTokenPush(TOKEN_PUSH);
@@ -35,18 +39,18 @@ public class App extends Application implements BootstrapNotifier {
         // Set region to bootstrap
         regionBootstrap = new RegionBootstrap(this, bealderSDK.getRegion());
 
-        BealderSDK.run(this);
+        bealderSDK.run(this);
 
     }
 
     @Override
     public void didEnterRegion(Region region) {
-        BealderSDK.enterRegion(region);
+        bealderSDK.enterRegion(region);
     }
 
     @Override
     public void didExitRegion(Region region) {
-        BealderSDK.exitRegion(region);
+        bealderSDK.exitRegion(region);
     }
 
     @Override

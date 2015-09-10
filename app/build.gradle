@@ -6,10 +6,10 @@ android {
 
     defaultConfig {
         applicationId "com.bealder.sample"
-        minSdkVersion 18
+        minSdkVersion 9
         targetSdkVersion 22
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.1"
     }
     buildTypes {
         release {
@@ -24,6 +24,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:22.1.1'
     compile project(':BealderSdk')
     compile 'com.mcxiaoke.volley:library:1.0.15'
-    compile 'com.android.support:support-v4:22.1.1'
-    compile 'org.altbeacon:android-beacon-library:2.1.4'
+    compile 'com.google.android.gms:play-services:7.5.0'
+    compile 'org.altbeacon:android-beacon-library:2.5.1'
 }
