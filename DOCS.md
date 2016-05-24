@@ -85,8 +85,8 @@ dependencies {
 
 ## Class Application, you need :
 
-    > implements __BootstrapNotifier__ and
-    > set BealderSDK
+ * To implement BootstrapNotifier
+ * Set BealderSDK
 
 ```Java
 import android.app.Application;
