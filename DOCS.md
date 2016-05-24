@@ -178,10 +178,10 @@ public class FirstActivity extends Activity {
         if (!canAccessLocation())
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, LOCATION_REQUEST_CODE);
 
-        // If you want ask BLE activation
+        // If you want to ask BLE activation
         BealderParameters.askBleActivation(this);
-        // If you want ask localisation activation
-        //BealderParameters.askGPSActivation(this);
+        // If you want to ask localisation activation
+        BealderParameters.askGPSActivation(this);
 
     }
 
