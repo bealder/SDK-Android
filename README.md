@@ -10,7 +10,7 @@ This sample app show how integrate SDK Bealder to manage your beacons.
 
 You can read [installation documentation](https://github.com/bealder/SDK-Android/blob/master/Documentation/DOCS.md)
 
-[More informations on our website](http://bealder.com)
+[More information on our website](http://bealder.com)
 
 
 
