@@ -8,9 +8,7 @@
 
 In Android Studio :
 
- * File > New > New module... > Import .Jar or .Aar package]
-
- * Choose new module :
+ * File > New > New module... > Import .Jar or .Aar package
 
  ![new module](images/new-module.png)
 
