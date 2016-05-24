@@ -6,9 +6,7 @@
 
 ## Import SDK
 
- * Aar file is used as a new module :
-
- ![File > New module... > Import .Jar or .Aar package](images/file-new-module.png)
+ ![File > New > New module... > Import .Jar or .Aar package]
 
  * Choose new module :
 
