@@ -10,15 +10,15 @@
 
  ![File > New module... > Import .Jar or .Aar package](images/file-new-module.png)
 
- * choise new module :
+ * Choose new module :
 
  ![new module](images/new-module.png)
 
- * you can change the name of Bealder SDK :
+ * You can change the name of Bealder SDK :
 
  ![dir sdk](images/dir-sdk.png)
 
- * Finaly if you have imported correctly :
+ * Finally if you have imported correctly :
 
  ![project tree](images/project-tree.png)
 
@@ -33,10 +33,11 @@
 ```
 dependencies {
     ....
-    compile 'com.google.android.gms:play-services-location:7.3.0'
+    compile 'com.android.support:appcompat-v7:23.3.0'
     compile 'com.mcxiaoke.volley:library:1.0.15'
-    compile 'com.android.support:support-v4:21.0.3'
-    compile 'org.altbeacon:android-beacon-library:2.5.1'
+    compile 'com.android.support:support-v4:23.3.0'
+    compile 'com.google.android.gms:play-services-location:7.8.0'
+    compile 'org.altbeacon:android-beacon-library:2.7'
     compile project(':BealderSdk')
 }
 ```
