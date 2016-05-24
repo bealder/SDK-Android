@@ -67,9 +67,23 @@ dependencies {
 <meta-data
     android:name="com.bealder.sdk.API_KEY"
     android:value="APP_KEY" />
-<service android:name="com.bealder.sdk.GeofenceTransitionsIntentService" />
-<activity android:name="com.bealder.android.sdk.AdvertActivity" >
-</activity>
+    
+<activity android:name="com.bealder.sdk.AdvertActivity"></activity>
+
+<receiver
+    android:name="com.bealder.sdk.GeofenceReceiver"
+    android:exported="false">
+    <intent-filter>
+        <action android:name="com.bealder.sdk.ACTION_RECEIVE_GEOFENCE" />
+    </intent-filter>
+</receiver>
+
+<receiver android:name="com.bealder.sdk.BootReceiver">
+    <intent-filter>
+        <action android:name="android.intent.action.BOOT_COMPLETED" />
+    </intent-filter>
+</receiver>
+
 ```
 
 ####	Class Application
