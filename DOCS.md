@@ -162,7 +162,7 @@ public class FirstActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(com.bealder.R.layout.activity_first);
 	
-	// You need to request the Location Permissions if the Android Version is M or above	
+        // You need to request the Location Permissions if the Android Version is M or above	
         if (!canAccessLocation())
             ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, LOCATION_REQUEST_CODE);
 
