@@ -4,7 +4,7 @@ This sample app show how integrate SDK Bealder to manage your beacons.
 
 ## Download SDK
 
-> [SDK-Bealder-release-2.3](https://github.com/bealder/SDK-Android/releases/tag/2.1)
+> [SDK-Bealder-release-2.3](https://github.com/bealder/SDK-Android/releases/tag/2.3)
 
 ## Documentation
 
