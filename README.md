@@ -16,7 +16,7 @@ We provide you a sample code to show you a simple implementation of our framewor
 
 You want to install our framework? Just follow instructions or look at the video.
 
-> [Installation guide](Documentation/DOCS.md)
+> [Installation guide](Documentation/INSTALL.md)
 
 ### Contact-us
 
