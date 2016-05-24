@@ -113,6 +113,7 @@ public class ApplicationClass extends Application implements BootstrapNotifier {
         //BealderParameters.setDebugMod();
 
         // Set Icon - require -
+        // It will set an icon for the push notification
         BealderParameters.setNotifIcon(R.drawable.ic_launcher);
         BealderParameters.setNotifIconL(R.drawable.icon_notif_l);
         BealderParameters.setNotifColorL(Color.parseColor("#357f77"));
@@ -154,15 +155,21 @@ import com.bealder.sdk.manager.BealderParameters;
 
 public class FirstActivity extends Activity {
 
+    private int LOCATION_REQUEST_CODE = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(com.bealder.R.layout.activity_first);
+	
+	// You need to request the Location Permissions if the Android Version is M or above	
+        if (!canAccessLocation())
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_FINE_LOCATION}, LOCATION_REQUEST_CODE);
 
         // If you want ask BLE activation
         BealderParameters.askBleActivation(this);
         // If you want ask localisation activation
-        //BealderParameters.askGPSActivation(this, "title_opt-in", "message_opt-in");
+        //BealderParameters.askGPSActivation(this);
 
     }
 
@@ -179,4 +186,12 @@ public class FirstActivity extends Activity {
         // - require -
         BealderParameters.onStop();
     }
+    
+    private boolean canAccessLocation() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+            return(PackageManager.PERMISSION_GRANTED == ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION));
+        else
+            return true;
+    }
+    
 ```
